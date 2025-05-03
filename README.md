@@ -19,10 +19,10 @@ Given input data points `(X, Y)`, the code:
 
 ## 📷 Example Output
 
-### 📈 Degree 2 Polynomial Fit
+### 📈 Degree 4 Polynomial Fit
 
 ![Degree 4 Fit](images/plot_deg4.png)
 
-### 📈 Degree 3 Polynomial Fit
+### 📈 Degree 8 Polynomial Fit
 
 ![Degree 8 Fit](images/plot_deg8.png)
