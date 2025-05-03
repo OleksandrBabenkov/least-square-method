@@ -145,7 +145,7 @@ def polynomial(a_local, x):
         ans += a_local[i] * math.pow(x, i)
     return ans    
 
-def Babenkov_Oleksandr_MNK(X, Y, n):
+def MNK(X, Y, n):
 
     a = get_coefficients(X, Y, n)
     print(f"wspojczynniki wielomianu: {a}")
@@ -154,13 +154,13 @@ def Babenkov_Oleksandr_MNK(X, Y, n):
     Y_fit = [polynomial(a, x) for x in X_curve]
 
     plt.figure()
-    plt.scatter(X, Y, color='blue', label='Punkty')
+    plt.scatter(X, Y, color='blue', label='data points')
 
-    plt.plot(X_curve, Y_fit, color='red', label=f'Wielomian stopnia {n}')
+    plt.plot(X_curve, Y_fit, color='red', label=f'polynomial degree {n}')
 
     plt.xlabel("X")
     plt.ylabel("Y")
-    plt.title("Metoda najmniejszych kwadratow")
+    plt.title("Least Squares Method")
     plt.legend()
 
 
@@ -170,10 +170,7 @@ def Babenkov_Oleksandr_MNK(X, Y, n):
 X = [-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2]
 Y = [-9, -4.5, -2.2, -0.8, 0.1, 0.6, 1.2, 4.3, 8.5]
 
-n = 8
-
-for i in range(2, n):
-
-    Babenkov_Oleksandr_MNK(X, Y, i)
+n = 4
+MNK(X, Y, n)
 
 plt.show()
